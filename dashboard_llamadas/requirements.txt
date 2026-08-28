@@ -1,0 +1,9 @@
+streamlit
+pandas
+geopandas
+folium
+streamlit-folium
+py7zr
+plotly
+osmnx
+branca
