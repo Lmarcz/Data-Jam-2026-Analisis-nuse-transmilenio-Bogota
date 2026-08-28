@@ -1,0 +1,30 @@
+{
+  "generado": "2026-08-27T19:20:06",
+  "unidad": "UPZ-mes",
+  "corte_train": "2023-2025",
+  "corte_test": "2026-01 a 2026-06",
+  "features": "rezagos t-1 de NUSE y del perfil TM; mes cíclico. Sin DAI/IR (anuales).",
+  "aviso": "No predice hechos en la estación. Predice llamados al 123 de la UPZ.",
+  "familias": {
+    "hurto": {
+      "ganador": "red_residual",
+      "skill_vs_persistencia": 0.08573112883346123,
+      "n_train": 1972,
+      "n_test": 346,
+      "frase": "Hurto: tradicional=bosque (skill 12.1%). Red=red_residual (skill 8.6%)."
+    },
+    "violencia": {
+      "ganador": "mlp",
+      "skill_vs_persistencia": 0.0897523345365745,
+      "n_train": 1972,
+      "n_test": 346,
+      "frase": "Violencia: tradicional=bosque (skill 22.6%). Red=mlp (skill 9.0%)."
+    }
+  },
+  "archivos": {
+    "metricas": "C:\\Users\\camilo.raba\\Downloads\\DataJAM\\DataJAM\\salidas_modelo\\metricas.csv",
+    "metricas_localidad": "C:\\Users\\camilo.raba\\Downloads\\DataJAM\\DataJAM\\salidas_modelo\\metricas_localidad.csv",
+    "importancia": "C:\\Users\\camilo.raba\\Downloads\\DataJAM\\DataJAM\\salidas_modelo\\importancia.csv",
+    "predicciones": "C:\\Users\\camilo.raba\\Downloads\\DataJAM\\DataJAM\\salidas_modelo\\predicciones_2026.csv"
+  }
+}
