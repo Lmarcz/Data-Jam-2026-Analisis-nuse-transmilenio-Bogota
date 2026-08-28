@@ -1,0 +1,34 @@
+{
+  "generado": "2026-08-27T18:26:51",
+  "panel": "C:\\Users\\camilo.raba\\Downloads\\DataJAM\\DataJAM\\salidas_integracion\\panel_estacion_mes.csv",
+  "calidad": {
+    "filas_entrada": 6018,
+    "filas_soacha": 168,
+    "filas_mes_incompleto": 9,
+    "filas_sin_upz": 168,
+    "filas_analisis": 5841,
+    "estaciones_analisis": 145,
+    "upz_analisis": 58
+  },
+  "filas_upz_mes": 2434,
+  "hallazgo_acotado": "Corte transversal (58 UPZ): asociación débil o no detectable positiva entre % de flujo nocturno ponderado y hurto NUSE medio de la UPZ (Spearman rho=0.03, p~0.845). No implica que el hurto ocurra en la estación.",
+  "como_leer": [
+    "Y es NUSE de la UPZ. X es el perfil TM agregado de las estaciones de esa UPZ.",
+    "media_por_upz es el corte más honesto (N = número de UPZ).",
+    "panel_upz_mes infla N (meses no son independientes); usar solo como descriptivo.",
+    "within_upz pregunta si, en la misma UPZ, meses con más flujo nocturno tienen más NUSE.",
+    "DAI/IR no entran al Spearman mensual: son anuales.",
+    "rank_tasa_loc_hurto es de la localidad, no de la UPZ; varias UPZ comparten la misma tasa."
+  ],
+  "archivos": {
+    "panel_upz_mes_agregado": "C:\\Users\\camilo.raba\\Downloads\\DataJAM\\DataJAM\\salidas_analisis\\panel_upz_mes_agregado.csv",
+    "ranking_upz": "C:\\Users\\camilo.raba\\Downloads\\DataJAM\\DataJAM\\salidas_analisis\\ranking_upz.csv",
+    "ranking_localidad": "C:\\Users\\camilo.raba\\Downloads\\DataJAM\\DataJAM\\salidas_analisis\\ranking_localidad.csv",
+    "spearman": "C:\\Users\\camilo.raba\\Downloads\\DataJAM\\DataJAM\\salidas_analisis\\spearman.csv",
+    "figuras": [
+      "C:\\Users\\camilo.raba\\Downloads\\DataJAM\\DataJAM\\salidas_analisis\\figuras\\ranking_upz_hurto.png",
+      "C:\\Users\\camilo.raba\\Downloads\\DataJAM\\DataJAM\\salidas_analisis\\figuras\\scatter_nocturno_hurto.png",
+      "C:\\Users\\camilo.raba\\Downloads\\DataJAM\\DataJAM\\salidas_analisis\\figuras\\spearman_hurto_media_upz.png"
+    ]
+  }
+}
