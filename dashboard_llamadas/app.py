@@ -16,17 +16,28 @@ st.title("Análisis Espacial y Temporal de Llamadas de Emergencia - Bogotá")
 # Carga de datos
 @st.cache_data
 def load_data():
-    # 1. Extraer UPZs
-    if not os.path.exists("upz_shapefile"):
-        with py7zr.SevenZipFile('ept_upz.7z', mode='r') as z:
-            z.extractall(path="upz_shapefile")
+    # 🌟 Obtenemos la ruta absoluta de la carpeta donde está este script (app.py)
+    current_dir = os.path.dirname(os.path.abspath(__file__))
     
-    archivos_shp = [os.path.join(r, f) for r, d, files in os.walk("upz_shapefile") for f in files if f.endswith(".shp")]
+    # 1. Rutas relativas seguras basadas en la ubicación del app.py
+    ruta_zip = os.path.join(current_dir, 'ept_upz.7z')
+    ruta_extraccion = os.path.join(current_dir, 'upz_shapefile')
+    
+    # 2. Extraer UPZs
+    if not os.path.exists(ruta_extraccion):
+        with py7zr.SevenZipFile(ruta_zip, mode='r') as z:
+            z.extractall(path=ruta_extraccion)
+    
+    archivos_shp = [os.path.join(r, f) for r, d, files in os.walk(ruta_extraccion) for f in files if f.endswith(".shp")]
     gdf_upz = gpd.read_file(archivos_shp[0]).to_crs("EPSG:4326")
     
-    # 2. Cargar CSVs
-    llamadas_df = pd.read_csv('Llamadas_UPZ_Estaciones.csv')
-    estaciones_df = pd.read_csv('Dim_estaciones.csv')
+    # 3. Cargar CSVs usando la ruta segura
+    ruta_llamadas = os.path.join(current_dir, 'Llamadas_UPZ_Estaciones.csv')
+    ruta_estaciones = os.path.join(current_dir, 'Dim_estaciones.csv')
+    
+    llamadas_df = pd.read_csv(ruta_llamadas)
+    estaciones_df = pd.read_csv(ruta_estaciones)
+
     
     # IGUALAR NOMBRE DE COLUMNAS: Renombramos upz_id a CODIGO_UPZ para cruces perfectos
     llamadas_df['upz_id'] = llamadas_df['upz_id'].astype(str).str.replace('UPZ', '', regex=False).str.strip()
