@@ -1,0 +1,28 @@
+﻿variable,unidad,definicion
+cod_estacion,estación,"Código TM (entero, sin ceros a la izquierda)"
+nom_est,estación,Nombre de estación (Dim_estaciones)
+upz_id,UPZ,Código UPZ del join espacial; vacío en Soacha
+cod_localidad,localidad,Código localidad modal de la UPZ según NUSE
+localidad,localidad,Nombre localidad modal de la UPZ según NUSE
+flag_soacha,estación,Estación fuera de UPZ Bogotá
+mes_incompleto,calidad,Menos de 20 días con dato en el mes
+flujo_total_mes,estación,validaciones + salidas tras fillna(0)
+pct_flujo_nocturno,estación,Flujo 19:00–05:59 / flujo total
+pct_flujo_pico_am,estación,Flujo 06–08 / flujo total
+pct_flujo_pico_pm,estación,Flujo 17–18 / flujo total (19 no entra)
+pct_flujo_finde,estación,Sábado + domingo/festivo / flujo total
+concentracion_horaria_gini,estación,Gini del perfil 04–23 del mes
+upz_nuse_hurto,UPZ,NUSE hurto efectuado + en proceso. Misma cifra para todas las estaciones de la UPZ.
+upz_nuse_violencia,UPZ,"NUSE riña, lesiones, disparos, herido, violencia sexual, etc."
+upz_nuse_orden_publico,UPZ,"NUSE embriaguez, pandillas, ruido, sospechoso, etc."
+upz_nuse_total,UPZ,Suma de las 4 familias NUSE (sin simulacro/broma/UPZ999)
+loc_nuse_hurto,localidad,NUSE hurto a nivel localidad (unidad coherente con población)
+poblacion_localidad,localidad,"Población SDS proyectada, suma del año"
+loc_tasa_nuse_hurto_100k_hab,localidad,Hurto NUSE localidad / población × 100 mil
+upz_hurto_por_100k_val_estacion,mixto,"UPZ hurto NUSE / validaciones de ESTA estación × 100 mil. Exposición de estación, outcome de UPZ."
+dai_total,localidad,Suma de campos numéricos de Delito de Alto Impacto (ZIP portal)
+ir_total,localidad,Suma de campos numéricos de Incidente Reportado (ZIP portal)
+dist_cai_m,estación,Distancia haversine al CAI más cercano (m)
+n_cai_500m,estación,CAI a ≤ 500 m
+indice_seguridad_nocturna_2019,UPZ,Índice SDMujer 2019 si el archivo trae el atributo
+unidad_ecologica,meta,"Siempre UPZ o localidad para outcomes de seguridad, nunca estación"

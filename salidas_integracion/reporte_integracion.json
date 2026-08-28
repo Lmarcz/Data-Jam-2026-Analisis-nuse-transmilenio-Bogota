@@ -1,0 +1,35 @@
+{
+  "generado": "2026-08-27T18:20:39",
+  "corte_nuse": "2026-06-30",
+  "filas_estacion_mes": 6018,
+  "estaciones": 149,
+  "upz": 58,
+  "pct_mes_incompleto": 0.0014955134596211367,
+  "pct_sin_nuse_upz": 0.027916251246261216,
+  "pct_con_poblacion": 0.9720837487537388,
+  "pct_con_tasa_hurto": 0.9720837487537388,
+  "solape_pct_nocturno_pico_pm": 0.0,
+  "extras": {
+    "poblacion": true,
+    "delito_alto_impacto": true,
+    "incidente_reportado": true,
+    "cai": true,
+    "indice_nocturno": true
+  },
+  "notas": [
+    "festivos=71 fechas",
+    "tm_filas_brutas=11115 codigos_fuera_catalogo=542",
+    "tm_filas_catalogo=6018 estaciones=149",
+    "Outcomes de seguridad viven en upz_* o loc_*. No interpretarlos como hechos en la estación.",
+    "Ventanas: nocturno 19-05, pico AM 06-08, pico PM 17-18 (disjuntas).",
+    "Gini calculado en horas 04-23.",
+    "Fuentes extra: ZIP/CSV de datosabiertos.bogota.gov.co. Nada de oaiee.scj.gov.co.",
+    "DAI/IR son anuales a localidad (mismo total copiado a cada mes del año). No interpretarlos como mensuales.",
+    "Población SDS: suma sexo×edad por localidad-año; se excluye código 00 (total Bogotá)."
+  ],
+  "archivos": {
+    "panel_estacion_mes": "C:\\Users\\camilo.raba\\Downloads\\DataJAM\\DataJAM\\salidas_integracion\\panel_estacion_mes.csv",
+    "panel_upz_mes": "C:\\Users\\camilo.raba\\Downloads\\DataJAM\\DataJAM\\salidas_integracion\\panel_upz_mes.csv",
+    "diccionario": "C:\\Users\\camilo.raba\\Downloads\\DataJAM\\DataJAM\\salidas_integracion\\diccionario_variables.csv"
+  }
+}
