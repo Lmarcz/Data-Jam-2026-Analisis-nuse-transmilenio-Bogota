@@ -1,0 +1,6 @@
+# Solo lo que necesita el tablero (sin torch ni sklearn).
+pandas>=2.2
+numpy>=1.26
+plotly>=5.24
+shiny>=1.2
+shinywidgets>=0.4

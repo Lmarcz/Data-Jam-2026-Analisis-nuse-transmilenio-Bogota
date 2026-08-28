@@ -1,0 +1,13 @@
+# DataJAM Bogotá — TransMilenio × NUSE (línea 123)
+pandas>=2.2
+numpy>=1.26
+requests>=2.31
+scikit-learn>=1.5
+joblib>=1.4
+matplotlib>=3.8
+plotly>=5.24
+shiny>=1.2
+shinywidgets>=0.4
+torch>=2.2
+# opcional, mejora p-valores de Spearman
+scipy>=1.13

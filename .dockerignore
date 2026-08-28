@@ -1,0 +1,11 @@
+.venv
+venv
+__pycache__
+.git
+cache_abiertos
+troncal_*.csv
+salidas_20*.csv
+llamadastramitadas*.csv
+*.ipynb
+*.docx
+.ipynb_checkpoints
